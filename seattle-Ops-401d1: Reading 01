@@ -1,0 +1,21 @@
+Metasploit
+
+It is a penetration testing framework that makes it easy for hackers – both attackers and defenders. 
+The framework work automated a lot of repetitive tasks that hackers used back in the days. 
+Metasploit is referred to as the Swiss army chainsaw because of what it can do that wasn’t achievable
+prior to its existence. Its core framework in free and already pre-installed in Kali Linux and the pro 
+with the GUI is also available for purchase.
+
+The Metasploit framework started in 2003 by HD Moore and it has gone through a tremendous improve and 
+eventually was eventually acquired by Rapid7 in 2009. Although it faces competition from Canvas and 
+Core Impact, it has become the go-to framework for exploit development. 
+
+The framework can integrate with many tools such as Nmap, SNMP scanning and Windows patch enumeration. 
+The Metasploit database contains exploits that’ll let you in once you find a weakness. Once the framework
+gets on a target machine, the post-exploitation tools enables you to utilize features such as privilege 
+escalation, pass the hash, packet sniffing, screen capture, keyloggers, and pivoting tools. 
+A persistent backdoor can also be setup in case of a machine reboot. 
+
+Metasploit can be found in different forms and can be learned from different platforms, but it’s always 
+best to learn by doing therefore one should practice on the installs that comes with the Linux and Unix 
+OS’s or download them if you need to. 
