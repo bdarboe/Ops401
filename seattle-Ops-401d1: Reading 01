@@ -1,3 +1,29 @@
+Kali Linux
+
+Kali Linux – a Debian-based Linux widely used for advanced Penetration Testing and Security 
+Auditing. Kali Linux has numerous tools for information security, penetration testing, security 
+research, computer forensics, and reverse engineering. 
+
+Kali was released in 2013 as complete rebuild of BackTrack Linux and maintained by Offensive Security. 
+
+Here are some of the features and benefits of Kali Linux.
+
+•	More than 600 penetration testing tools
+•	Free and always will be
+•	Open source Git tree
+•	FHS(Filesystem Hierarchy Standard) compliant
+•	Wide-ranging wireless device support
+•	Custom kernel, patched for injection
+•	Developed in a secure environment
+•	GPG signed packages and repositories
+•	Multi-language support
+•	Completely customizable
+•	ARMEL and ARMHF support
+
+In summary, Kali Linux was built for penetration testing professionals therefore some familiarity 
+with the Linux based OS is expected before using Kali.  
+
+
 Metasploit
 
 It is a penetration testing framework that makes it easy for hackers – both attackers and defenders. 
