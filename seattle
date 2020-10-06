@@ -1,0 +1,20 @@
+Security Operations Center
+
+the threat of cybersecurity has become more common and destructive as well as 
+difficult to detect. The sophistication of the attacks has made it difficult and longer to 
+detect threats, therefore needing the intervention of Security Operations Center (SOC).
+
+SOC is a facility within the organization that hosts the security team which comprises of 
+security experts in different respects. The team can help detect threats and prevent 
+security breaches from occurring on the organization’s network infrastructure. They’re 
+the first responders when an incident occurs within the organization. Both large and 
+small organizations can implement a SOC team. 
+
+In organizations, a Computer Security Incident Response Team (CSIRT) also known as 
+CIRT or CERT is an in-house incident response team that may work under SOC or 
+stand alone. The functions of SOC and CSIRT are similar in terms of response, but 
+CSIRT communicates with clients, executives, and the board about the incidents. 
+Although they may be needed in different scenarios, the difference between the two is 
+negligible and they can be combined in certain scenarios.
+
+Nagios Monitoring Tool
