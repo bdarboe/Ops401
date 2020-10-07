@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# Importing Library
+  import datetime, time
+  import os
+  from pythonping import ping
+#Script Name: Ops401challenge01
+#Author:Bubacarr Darboe          
+#Date of last revision: 10/06/2020
+#Description of purpose: uptime_sensor
+#Function
+#Main
+  while True:    
+  target_ip="8.8.8.8"    
+  response = os.system("ping", target_ip)    
+  if 0 == response:        
+    print("Successful ping: " + target_ip +  " is up")    
+  else:        
+    print("Successful ping: " + target_ip +  " is down") 
+  time.sleep(2)
+#End
