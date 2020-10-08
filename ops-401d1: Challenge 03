@@ -1,7 +1,15 @@
-import os, time
-import smtplib
-from pythonping import ping
-from email.message import EmailMessage
+#!/usr/bin/env python3
+# Importing Library
+ import os, time
+ import smtplib
+ from pythonping import ping
+ from email.message import EmailMessage
+#Script Name: Ops401challenge03
+#Author:Bubacarr Darboe          
+#Date of last revision: 10/07/2020
+#Description of purpose: uptime_sensor2
+#Function
+#Main
 my_pass = input("Enter password: ")
 while True:
     try:
@@ -34,3 +42,5 @@ while True:
         # Sleeping for 10 seconds
         time.sleep(10)
         print('Trying again')
+        
+   #End
