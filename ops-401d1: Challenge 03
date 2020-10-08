@@ -1,0 +1,36 @@
+import os, time
+import smtplib
+from pythonping import ping
+from email.message import EmailMessage
+my_pass = input("Enter password: ")
+while True:
+    try:
+        ip="8.8.8.8"
+        # Create SMTP session
+        s = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+        s.ehlo()
+        # Authentication
+        s.login("darbykeluntang@gmail.com", my_pass)
+        # Instance of email message
+        msg = EmailMessage()
+        msg["Subject"]= "Testing 123"
+        msg["From"]="darbykeluntang@gmail.com"
+        msg["To"]="darbykeluntang@gmail.com"
+        response = os.system(f"ping -c 1 " +ip)
+        if 0 == response:
+            text=f"{time.ctime()} UP {ip} Ping Successful"
+        else:
+            text=f"{time.ctime()} DOWN {ip} Ping Unsuccessful"
+        # msg content
+        msg.set_content(text)
+        # Send mail
+        s.send_message(msg)
+        s.quit()
+        print('sent')
+        time.sleep(2)
+    except:
+        print('site is down')
+        print('sleeping')
+        # Sleeping for 10 seconds
+        time.sleep(10)
+        print('Trying again')
