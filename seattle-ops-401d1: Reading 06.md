@@ -26,14 +26,14 @@ In Windows, the following powershell command is run to get the hash for your fil
 Get-FileHash C:\path\to\file.iso
 
 In MacOS, we run the following commands for MD5, SHA-1, and SHA-256 hashes:
-md5 /path/to/file
-shasum /path/to/file
-shasum -a 1 /path/to/file
+md5 /path/to/file, 
+shasum /path/to/file, 
+shasum -a 1 /path/to/file, and 
 shasum -a 256 /path/to/fi
 
 In Linux we run the following commands.
-md5sum /path/to/file
-sha1sum /path/to/file
+md5sum /path/to/file, 
+sha1sum /path/to/file, and 
 sha256sum /path/to/file
 
 MD5, SHA-1, and SHA-256 are different hash functions, SHA-256 has been known to be the most reliable and recommended.
