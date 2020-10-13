@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+# Importing Library
+from cryptography.fernet import Fernet
+import time
+
+#Script Name: Ops401challenge06
+#Author:Bubacarr Darboe          
+#Date of last revision: 10/12/2020
+#Description of purpose: file encryption and decryption
+
+# Declare a variable
+
+file = text2dencrypt.txt
+output = ""
+
+#Declare Functions
+
+def mode_entry():
+    global output
+print('''Options to select:
+        (mode 1)Encrypt a file
+        (mode 2)Decrypt a file
+        (mode 3)Encrypt a message
+        (mode 4)Decrypt a message
+        ''')
+        user_input=input("plese enter mode: ")
+
+        if(user_input == "mode1"):
+            encryptFile()
+        elif(user_input == "mode2"):
+            decryptFile
+        elif(user_input == "mode3"):
+            output = encryptedmessage()
+        elif(user_input == "mode4"):
+            decryptedmessage(output)
+        else:
+            print("This is the end!")
+            exit(0)
+
+def encryptFile():
+    f = Fernet(key)
+    with open(file, "rb") as fileread:
+        readfile = fileread.read()
+    encryptFile = f.encrypt(readfile)
+    with open(file, "wb") as filewrite:
+        filewrite.write(encryptFile)
+        time.sleep(2)
+    print("files encrypted")
+
+def decryptFile():
+    f = Fernet(key)
+    with open(file, "rb") as fileread:
+        encrypted_data = fileread.read()
+    decrypted_data = f.decrypt(encrypted_data)
+    with open(file, "wb") as filewrite:
+        filewrite.write(decrypted_data)
+
+def write_key():
+    key = Fernet.generate_key()
+    with open("key.key", "wb") as key_file:
+        key_file.write(key)
+
+def load_key():
+    return open("key.key", "rb").read()
+
+
+def encryptMessage():
+    f = Fernet(key)
+    user_message = input("Enter your message: ").encode()
+    encryptedmessage = f.encrypt(user_message)
+    print(encryptedmessage)
+    return encryptedmessage
+
+def decryptMessage(message):
+    f = Fernet(key)
+    decryptedmessage = f.decrypt(message)
+    print(decryptedmessage)
+#Main
+
+# generate and write a new key
+write_key()
+# load the previously generated key
+key = load_key()
+while(1):
+    mode_entry()
+
+#End
+
+
