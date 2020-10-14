@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
-
-import os, time
+# Importing Library
 from cryptography.fernet import Fernet
+import time, os
+
+#Script Name: Ops401challenge07
+#Author:Bubacarr Darboe          
+#Date of last revision: 10/13/2020
+#Description of purpose: file encryption and decryption 2
 
 #Declare a variable
 
@@ -53,6 +58,7 @@ def decryptFile(file, key):
     # write the original file
     with open(file, "wb") as filewrite:
         filewrite.write(decrypted_data)
+#Main
 
 getFiles(path)
 interface()
