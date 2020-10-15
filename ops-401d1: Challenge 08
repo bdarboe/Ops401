@@ -1,8 +1,14 @@
+#!/usr/bin/env python3
+# Importing Library
 from cryptography.fernet import Fernet
-import time
-import os
-path = “./allMySecrets”
+import time, os
+
+#Script Name: Ops401challenge08
+#Author:Bubacarr Darboe          
+#Date of last revision: 10/14/2020
+#Description of purpose: file encryption and decryption complete
 # Declare Variable
+path = “./newFolder”
 file2 = “meOh.txt”
 output = “”
 # Declare functions
