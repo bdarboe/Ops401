@@ -9,7 +9,7 @@ import time, os
 #Description of purpose: file encryption and decryption complete
 # Declare Variable
 path = “./newFolder”
-file2 = “meOh.txt”
+file = "text2dencrypt.txt"
 output = “”
 # Declare functions
 def mode_entry():
