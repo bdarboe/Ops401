@@ -1,47 +1,33 @@
 WHAT IS DATA LOSS PREVENTION (DLP)?
 Data loss prevention (DLP) is a set of tools and processes used to ensure that sensitive data is not lost, misused, or accessed by unauthorized users. DLP software classifies regulated, confidential and business critical data and identifies violations of policies defined by organizations or within a predefined policy pack, typically driven by regulatory compliance such as HIPAA, PCI-DSS, or GDPR. Once those violations are identified, DLP enforces remediation with alerts, encryption, and other protective actions to prevent end users from accidentally or maliciously sharing data that could put the organization at risk. Data loss prevention software and tools monitor and control endpoint activities, filter data streams on corporate networks, and monitor data in the cloud to protect data at rest, in motion, and in use. DLP also provides reporting to meet compliance and auditing requirements and identify areas of weakness and anomalies for forensics and incident response.
 
-DO I NEED DATA LOSS PREVENTION? 3 MAIN USES CASES FOR DLP
-Data loss prevention solves three main objectives that are common pain points for many organizations: personal information protection / compliance, intellectual property (IP) protection, and data visibility.
-
-Personal Information Protection / Compliance: Does your organization collect and store Personally Identifiable Information (PII), Protected Health Information (PHI), or payment card information (PCI)? If so, you are more than likely subject to compliance regulations, such as HIPAA (for PHI) and GDPR (for personal data of EU residents), that require you to protect your customers’ sensitive data. DLP can identify, classify, and tag sensitive data and monitor activities and events surrounding that data. In addition, reporting capabilities provide the details needed for compliance audits.
-IP Protection: Does your organization have important intellectual property and trade or state secrets that could put your organization’s financial health and brand image at risk if lost or stolen? DLP solutions like Digital Guardian that use context-based classification can classify intellectual property in both structured and unstructured forms. With policies and controls in place, you can protect against unwanted exfiltration of this data.
-Data Visibility: Is your organization seeking to gain additional visibility into data movement? A comprehensive enterprise DLP solution can help you see and track your data on endpoints, networks, and the cloud. This will provide you with visibility into how individual users within your organization interact with data.
+THREE MAIN USES CASES FOR DLP
+1. Personal Information Protection / Compliance 
+2. IP Protection
+3. Data Visibility
 While these are the three main use cases, DLP can remediate a variety of other pain points including insider threats, Office 365 data security, user and entity behavior analysis, and advanced threats.
 
-WHY DATA LOSS PREVENTION? 7 TRENDS DRIVING DLP ADOPTION
-In the 2017 Gartner Magic Quadrant for Enterprise DLP, Gartner estimated that the total data loss prevention market would reach $1.3 billion in 2020. Now, updated forecasts show a likely $2.64 billion market size in 2020. The DLP market is not new, but it has evolved to include managed services, cloud functionality, and advanced threat protection amongst other things. All of this, coupled with the upward trend in giant data breaches, has seen a massive uptick in DLP adoption as a means to protect sensitive data. Here are nine trends that are driving the wider adoption of DLP:
+7 TRENDS DRIVING DLP ADOPTION
 
-The Growth of the CISO Role: More companies have hired and are hiring Chief Information Security Officers (CISOs), who often report to the CEO. CEOs want to know the game plan for preventing data leaks. DLP provides clear business value in this regard and gives CISOs the necessary reporting capabilities to provide regular updates to the CEO.
-Evolving Compliance Mandates: Global data protection regulations constantly change and your organization needs to be adaptable and prepared. Within the past couple years, lawmakers in the EU and New York State, respectively, have passed the GDPR and NYDFS Cybersecurity Regulation, both of which have tightened data protection requirements. DLP solutions allow organizations the flexibility to evolve with changing global regulations.
-There are More Places to Protect Your Data: Increased use of the cloud, complicated supply chain networks, and other services you no longer have full control over has made protecting your data more complex. Visibility into the events and context of events that surround your data before it leaves your organization is important in preventing your sensitive data from getting into the wrong hands.
-Data Breaches are Frequent and Large: Adversaries from nation states, cyber criminals and malicious insiders are targeting your sensitive data for a variety motives, such as corporate espionage, personal financial gain, and political advantage. DLP can protect against all kinds of adversaries, malicious or not. Within just the past couple of years, there have been thousands of data breaches and many more security incidents. Billions of records have been lost in giant data breaches such as: the database misconfiguration that leaked nearly 200 million US voter records in 2015, the Equifax data breach that kept getting bigger, and the Yahoo breach that affected 3 billion users. These are only a few of the many headliners that emphasize the need to protect your organization’s data.
-Your Organization’s Stolen Data is Worth More: Stolen data is often sold on the Dark Web, where individuals and groups can purchase and use it for their own benefit. With certain data types selling for up to a few thousand dollars, there is a clear financial incentive for data theft.
-There’s More Data to Steal: The definition of what is sensitive data has expanded over the years. Sensitive data now includes intangible assets, such as pricing models and business methodologies. From 1975 to 2015, the amount of intangible assets grew from 17% of the S&P 500 market value to 84%, according to Ocean Tomo’s Intangible Asset Market Value Study. These assets also hit a record $21 trillion in 2018. This means your organization has a lot more data to protect.
-There’s a Security Talent Shortage: The security talent shortage is not going away anytime soon and you’ve probably already felt its impact on your own organization. In fact, in an ESG and ISSA survey from 2017, 43% of respondents said their organizations had been impacted by the shortage. The shortage is only getting worse with 3.5 million unfilled security positions projected by 2021. Managed DLP services act as remote extensions of your team to fill that personnel gap.
+1. The Growth of the CISO Role: More companies have hired and are hiring Chief Information Security Officers (CISOs), who often report to the CEO.
+2. Evolving Compliance Mandates
+3. There are More Places to Protect Your Data
+4. Data Breaches are Frequent and Large
+5. Your Organization’s Stolen Data is Worth More
+6. There’s More Data to Steal
+7. There’s a Security Talent Shortage
+
 WHAT TYPE OF DATA LOSS PREVENTION IS RIGHT FOR YOUR ORGANIZATION?
 
 DATA LOSS PREVENTION BEST PRACTICES
-Determine your primary data protection objective. Are you trying to protect your intellectual property, gain more visibility into your data, or meet regulatory compliance? With a main objective in place, it’s easier to determine the most appropriate DLP deployment architecture or combination of architectures. The four main DLP deployment architectures are: Endpoint DLP, Network DLP, Discovery, and Cloud.
-DLP is not a security-only decision. If you don’t have an approved budget for a DLP program yet, you need buy-in from other executives like the CFO and the CEO. Leverage the pain points of different business units to show how DLP can address them. For example, the CFO’s pain points include efficient use of assets and profitable growth. Managed DLP services address these pain points by eliminating the need for additional staff and CapEx to deploy and maintain a DLP program.
-When researching DLP vendors, establish your evaluation criteria:
-What types of deployment architectures are offered?
-Do they support Windows, Linux, and OS X with feature parity?
-What deployment options do they offer? Do they provide managed services?
-Do you need to defend against mainly internal or external threats? Or both?
-Do you need to perform content- or context-based inspection and classification? Will your users be able to self-classify documents? Do you need a blend of multiple methods?
-Are you most concerned with protecting structured or unstructured data?
-Do you plan to see and enforce data movement based on policies, events, or users?
-What compliance regulations are you bound by? What new regulations are on the horizon?
-Who are their technology alliance partners and what technologies would you like to integrate with your DLP?
-How quickly do you need to deploy your DLP program?
-Will you need additional staff to manage your DLP program?
-Clearly define the roles and responsibilities of the individuals involved in your organization’s DLP program. Building out role-based rights and duties will provide checks and balances.
-Start with a clearly defined quick win. Organizations often try complicated initial rollout plans or try to solve too many use cases at once. Define your initial approach and set objectives that are fast and measurable. You should either take the project approach, where you narrow in and focus on a specific data type, or the data visibility approach, where your primary focus is discovery and automated classification of sensitive data to control egress.
-Work together with business unit heads to define the DLP policies that will govern your organization’s data. This will help ensure that the different business units are aware of the policies in place and how they might be impacted. Keep in mind that there’s no one right way to develop DLP policies. Often, DLP strategy will align with your corporate culture.
-Document your processes carefully. This will help you with consistent application of policies, give you a document of record for when reviews are needed, and will also be helpful when onboarding new team members or employees.
-Define success metrics and share reporting with business leaders. Determine the key performance indicators (KPIs) you should measure and monitor them closely to determine the success of your DLP program and areas of improvement. Share these metrics with your organization’s leaders to show the positive impact of DLP and its business value.
-DLP is a program, not a product. Installing a DLP tool is just the first step in Data Loss Prevention. While you can get quick wins, understanding that DLP is a program to be continuously worked on will help you achieve lasting success. DLP is a constant process of understanding your data and how users, systems, and events interact with that data to better protect it.
+Determine your primary data protection objective. 
+Clearly define the roles and responsibilities 
+Start with a clearly defined quick win
+Work together with business unit heads to define the DLP policies that will govern your organization’s data. 
+Document your processes carefully
+Define success metrics and share reporting with business leaders
+DLP is a program, not a product
+
 EXPERTS WEIGH IN ON DATA LOSS PREVENTION
 Here’s a look at what the experts have to say about data loss prevention.
 
@@ -57,11 +43,3 @@ When it's done right, strong encryption is unbreakable encryption. Any weakness 
 
 3. Be mindful of insider threats. “I’ve worked with organizations to prevent insider threats as well as in response to incidences. In my experience, the notion of it being ’easy’ to deter and detect insider threats is only the case if organizations are proactive about their approach in the first place. There are strategic ways to be proactive – from having internal training for business users to feel responsible with knowledge, skills and awareness – to monitoring activities that companies can employ that set up rules and parameters on what is considered appropriate for various employees to do as part of their work functions and flag instances that are outside of those rules.” — Isaac Kohen, Detecting + Deterring Insider Threats: How Easy Can It Be?, LinkedIn
 
-WHY DIGITAL GUARDIAN?
-Digital Guardian is a next-generation cloud-based data protection platform that is the only solution converging DLP, endpoint detection and response (EDR), and user and entity behavior analytics (UEBA) to provide data protection from all threats. Our comprehensive DLP platform eliminates the need for additional agents and consoles for EDR or UEBA and allows IT security teams to consolidate their security capabilities. We have been named a Gartner Magic Quadrant leader in Enterprise DLP for five consecutive years and are the #1 rated technology by Gartner for IP protection.
-
-Our platform provides:
-
-The Deepest Visibility – We see and correlate system events, user events and data events at the endpoint, on the network, in the cloud and in databases to give you a 360-degree perspective on data movement in your organization. This is critical to protecting sensitive data from all threats, whether internal or external.
-Real Time Analytics – The Digital Guardian Analytics & Reporting Cloud uses a big data cloud services architecture to aggregate and analyze millions of system events, user events and data events. Events are organized into actionable insights, allowing analysts to prioritize and respond to threats more intelligently and efficiently.
-Flexible Controls – Our platform automates controls to prevent data breaches before they happen. Controls are flexible with situational granularity so they don’t get in the way of your day-to-day business activities.
