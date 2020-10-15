@@ -1,87 +1,104 @@
-#!/usr/bin/env python3
-# Importing Library
 from cryptography.fernet import Fernet
 import time
-
-#Script Name: Ops401challenge06
-#Author:Bubacarr Darboe          
-#Date of last revision: 10/12/2020
-#Description of purpose: file encryption and decryption
-
-# Declare a variable
-
-file = text2dencrypt.txt
-output = ""
-
-#Declare Functions
-
+import os
+path = “./allMySecrets”
+# Declare Variable
+file2 = “meOh.txt”
+output = “”
+# Declare functions
 def mode_entry():
     global output
-print('''Options to select:
-        (mode 1)Encrypt a file
-        (mode 2)Decrypt a file
-        (mode 3)Encrypt a message
-        (mode 4)Decrypt a message
-        ''')
-        user_input=input("plese enter mode: ")
+    print(“”"
+    Please select a mode.
+    (mode 1)Encrypt a file 
+    (mode 2)Decrypt a file 
+    (mode 3)Encrypt a message 
+    (mode 4)Decrypt a message 
+    (mode 5)Encrypt a folder 
+    (mode 6)Decrypt a folder 
+    (mode 7)Alter Desktop Wallpaper
+    (mode 8)Create popup window
+     9)
+     exit
+    “”")
+    userInput = input(“option ? “)
+    if(userInput == “mode 1”):
+        encryptFile(file2, key)
+    elif(userInput == “mode 2”):
+        decryptFile(file2, key)
+    elif (userInput == “mode 3”):
+        output = encryptMessage()
+    elif (userInput == “mode 4”):
+        decryptMessage(output)
+    elif(userInput == “mode 5”):
+        encrptFolder(path)
+    elif(userInput == “mode 6”):
+        decryptFolder(path)
+    elif (userInput == “mode 7”):
+       elif(userInput == “mode 8”):
+        Alter desktop(path)
+    elif(userInput == “9”):
+        create a popup window(path)
+    else:
+       print("This is the end!")
+       exit(0)
 
-        if(user_input == "mode1"):
-            encryptFile()
-        elif(user_input == "mode2"):
-            decryptFile
-        elif(user_input == "mode3"):
-            output = encryptedmessage()
-        elif(user_input == "mode4"):
-            decryptedmessage(output)
-        else:
-            print("This is the end!")
-            exit(0)
-
-def encryptFile():
+def encryptFile(file, key):
     f = Fernet(key)
-    with open(file, "rb") as fileread:
+    with open(file, “rb”) as fileread:
         readfile = fileread.read()
     encryptFile = f.encrypt(readfile)
-    with open(file, "wb") as filewrite:
+    with open(file, “wb”) as filewrite:
         filewrite.write(encryptFile)
         time.sleep(2)
-    print("files encrypted")
-
-def decryptFile():
+        print(“file has been encrypted”)
+def decryptFile(file, key):
     f = Fernet(key)
-    with open(file, "rb") as fileread:
+    with open(file, “rb”) as fileread:
+        # read the encrypted data
         encrypted_data = fileread.read()
+    # decrypt data
     decrypted_data = f.decrypt(encrypted_data)
-    with open(file, "wb") as filewrite:
+    # write the original file
+    with open(file, “wb”) as filewrite:
         filewrite.write(decrypted_data)
-
-def write_key():
+        time.sleep(2)
+        print(“file has been decrypted”)
+def generateKey():
     key = Fernet.generate_key()
-    with open("key.key", "wb") as key_file:
+    with open(“last.key”, “wb”) as key_file:
         key_file.write(key)
-
-def load_key():
-    return open("key.key", "rb").read()
-
-
+def loadKey():
+    return open(“last.key”, “rb”).read()
+# Encrypt a message (mode 3)
 def encryptMessage():
     f = Fernet(key)
-    user_message = input("Enter your message: ").encode()
-    encryptedmessage = f.encrypt(user_message)
-    print(encryptedmessage)
-    return encryptedmessage
-
-def decryptMessage(message):
+    userMessage = input (“Enter your message to encrypt.“).encode()
+    encryptedMessage = f.encrypt(userMessage)
+    print (encryptedMessage)
+    return encryptedMessage
+def decryptMessage(msg):
     f = Fernet(key)
-    decryptedmessage = f.decrypt(message)
-    print(decryptedmessage)
-#Main
-
-# generate and write a new key
+    decryptMsg = f.decrypt(msg)
+    print (decryptMsg)
+def encrptFolder(dirNames):
+    completeFileList = list()
+    for (dirPath, dirName, fileName) in os.walk(dirNames):
+        completeFileList += [os.path.join(dirPath, file) for file in fileName]
+    for fil in completeFileList:
+        print(fil)
+        encryptFile(fil, key)
+def decryptFolder(dirNames):
+    completeFileList = list()
+    for (dirPath, dirName, fileName) in os.walk(dirNames):
+        completeFileList += [os.path.join(dirPath, file) for file in fileName]
+    for fil in completeFileList:
+        print(fil)
+        decryptFile(fil, key)
+# main
 write_key()
 # load the previously generated key
 key = load_key()
 while(1):
     mode_entry()
-
-#End
+# End
