@@ -8,47 +8,54 @@ import time, os
 #Date of last revision: 10/14/2020
 #Description of purpose: file encryption and decryption complete
 # Declare Variable
-path = “./newFolder”
 file = "text2dencrypt.txt"
 output = “”
-# Declare functions
+#Declare functions
+path = “./newFolder”
 def mode_entry():
     global output
     print(“”"
     Please select a mode.
-    (mode 1)Encrypt a file 
-    (mode 2)Decrypt a file 
-    (mode 3)Encrypt a message 
-    (mode 4)Decrypt a message 
-    (mode 5)Encrypt a folder 
-    (mode 6)Decrypt a folder 
-    (mode 7)Alter Desktop Wallpaper
-    (mode 8)Create popup window
-     9)
-     exit
+    1) Encrypt a file (mode 1)
+    2) Decrypt a file (mode 2)
+    3) Encrypt a message (mode 3)
+    4) Decrypt a message (mode 4)
+    5) Encrypt a folder (mode 5)
+    6) Decrypt a folder (mode 6)
+    7) exit
     “”")
     userInput = input(“option ? “)
-    if(userInput == “mode 1”):
+    if(userInput == “1”):
         encryptFile(file2, key)
-    elif(userInput == “mode 2”):
+        ## Encrypt file here
+        print(“”)
+    elif(userInput == “2”):
         decryptFile(file2, key)
-    elif (userInput == “mode 3”):
+        ## Encrypt file here
+        print(“”)
+    elif (userInput == “3”):
         output = encryptMessage()
-    elif (userInput == “mode 4”):
+        ## Encrypt file here
+        print(“”)
+    elif (userInput == “4”):
         decryptMessage(output)
-    elif(userInput == “mode 5”):
+        ## Encrypt file here
+        print(“”)
+    elif(userInput == “5”):
         encrptFolder(path)
-    elif(userInput == “mode 6”):
+        ## Encrypt folder here
+        print(“”)
+    elif(userInput == “6”):
         decryptFolder(path)
-    elif (userInput == “mode 7”):
-       elif(userInput == “mode 8”):
-        Alter desktop(path)
-    elif(userInput == “9”):
-        create a popup window(path)
+        ## Encrypt folder here
+        print(“”)
+    elif (userInput == “7”):
+        ## Encrypt file here
+        print(“Thank you using this application”)
+        exit(0)
     else:
-       print("This is the end!")
-       exit(0)
-
+        print(“put right input here”)
+        interface()
 def encryptFile(file, key):
     f = Fernet(key)
     with open(file, “rb”) as fileread:
@@ -102,9 +109,8 @@ def decryptFolder(dirNames):
         print(fil)
         decryptFile(fil, key)
 # main
-write_key()
-# load the previously generated key
-key = load_key()
-while(1):
+generateKey()
+key = loadKey()
+while (1):
     mode_entry()
 # End
