@@ -18,16 +18,16 @@ response = sr1(IP(dst=host)/TCP(sport=src_port,dport=dst_port,flags="S"),timeout
 ###Function###
 for dst_port in port_range:
     src_port = random.randint(1025,65534)
-######
-if response is None:
-    print("packet filtered")
-elif(response.haslayer(TCP)):
-    if(response.getlayer(TCP).flags == 0x12): #port responding and open
-        print(response)
-    elif (response.getlayer(TCP).flag == 0x14):
-        print(response)
-    else:
-        print("The port is filtered and dropped")
+
+    if response is None:
+        print("packet filtered")
+    elif(response.haslayer(TCP)):
+        if(response.getlayer(TCP).flags == 0x12): #port responding and open
+            print("Port " + str(dst_port) + " is open")
+        elif (response.getlayer(TCP).flag == 0x14):#port responding and closed
+            print("Port " + str(dst_port) + " is closed")
+        else:
+            print("The port is filtered and dropped")#port is filtered and dropped silently
 #Main
 #End
 
