@@ -12,7 +12,7 @@ from scapy.all import sr1,IP,ICMP,TCP
 #Description of purpose: packet sniffing
 #Declaration of variable
 host = str(input("Enter your networ address with the CIDR block code: "))
-addresses = IPv4Network(network)
+addresses = IPv4Network
 host_count = 0
 port_range = [21, 22, 23]
 src_port = 22
