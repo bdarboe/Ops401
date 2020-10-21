@@ -1,4 +1,6 @@
- VPC (virtual private cloud) is a virtual data center in the cloud that gives users the ability to create their own private IP address range, creation of subnets and configuration of route tables and network gateways. The benefit of VPC is that it helps in aspects of cloud computing like privacy, security and preventing loss of proprietary data.
+ VPC (virtual private cloud) 
+ 
+a virtual data center in the cloud that gives users the ability to create their own private IP address range, creation of subnets and configuration of route tables and network gateways. The benefit of VPC is that it helps in aspects of cloud computing like privacy, security and preventing loss of proprietary data.
  
 Basics of a VPC
 
