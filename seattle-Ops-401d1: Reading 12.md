@@ -8,14 +8,14 @@ These two are similar except that an IPS can block potential threats and stoppin
 Network Intrusion Detection Systems vs. Host Intrusion Detection Systems (HIDS)
 These two are used differently as their names implied. NID has a much quicker response that a HID. NID operates on different platforms as it does not need the presence of a specific OS or software to operate.  They’re low cost and easy to setup. 
 
-    Pros of Network Intrusion Detection Systems:
+      Pros of Network Intrusion Detection Systems:
 1.	They Can Be Tuned to Specific Content in Network Packets
 2.	They Can Look at Data in the Context of the Protocol
 3.	They Can Qualify and Quantify Attacks
 4.	They Make It Easier to Keep Up With Regulation
 5.	They Can Boost Efficiency
 
-    Cons of Network Intrusion Detection Systems:
+      Cons of Network Intrusion Detection Systems:
 1.	They Will Not Prevent Incidents By Themselves
 2.	An Experienced Engineer Is Needed to Administer Them
 3.	They Do Not Process Encrypted Packets
