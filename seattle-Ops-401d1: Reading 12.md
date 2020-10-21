@@ -15,13 +15,13 @@ These two are used differently as their names implied. NID has a much quicker re
 4.	They Make It Easier to Keep Up With Regulation
 5.	They Can Boost Efficiency
 
-      Cons of Network Intrusion Detection Systems:
-1.	They Will Not Prevent Incidents By Themselves
-2.	An Experienced Engineer Is Needed to Administer Them
-3.	They Do Not Process Encrypted Packets
-4.	IP Packets Can Still Be Faked
-5.	False Positives Are Frequent
-6.	They Are Susceptible to Protocol Based Attacks
-7.	The Signature Library Needs to Be Continually Updated to Detect the Latest Threats
+    Cons of Network Intrusion Detection Systems:
+a.	They Will Not Prevent Incidents By Themselves
+b.	An Experienced Engineer Is Needed to Administer Them
+c.	They Do Not Process Encrypted Packets
+d.	IP Packets Can Still Be Faked
+e.	False Positives Are Frequent
+f.	They Are Susceptible to Protocol Based Attacks
+g.	The Signature Library Needs to Be Continually Updated to Detect the Latest Threats
 
 
