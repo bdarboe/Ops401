@@ -18,7 +18,8 @@ def user_selection():
     1. mode 1
     2. Mode 2
     3. mode 3
-    4. Exit
+    4. mode 4
+    5. Exit
     """)
     if(user_choice =="1"):
         mode1()
@@ -26,6 +27,8 @@ def user_selection():
         mode2()
     elif(user_choice == "3"):
         mode3()
+    elif(user_choice == "4"):
+        mode4()
     else:
       print("Exit")
       exit()
