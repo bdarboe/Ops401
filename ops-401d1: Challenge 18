@@ -84,13 +84,17 @@ def mode3():
                 print("pxssh failed on login.")
                 print(e)
 
-def 
-
-zip_file = ### Your password protected zip file ###
-password = ### Password to guess ###
-
-with ZipFile(zip_file) as zf:
-  zf.extractall(pwd=bytes(password,'utf-8'))
+def mode4():
+    with ZipFile("secretmessage.zip") as myzip:
+        with myzip.open("rockyou.txt") as myfile:
+            fileline=myfile.read().splitlines()
+            for line in fileline:
+                if str(line) == myzip:
+                    print("There was a match")
+                    break
+                else:
+                    print("No match found")
+                input()
 #Main
 user_selection()
 #End
