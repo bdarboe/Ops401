@@ -1,0 +1,90 @@
+import os
+import time
+import itertools
+import getpass
+from pexpect import pxssh
+from zipfile import ZipFile
+
+#function
+def user_selection():
+    user_choice=input("""
+    select a mode:
+    1. mode 1
+    2. Mode 2
+    3. mode 3
+    4. Exit
+    """)
+    if(user_choice =="1"):
+        mode1()
+    elif(user_choice =="2"):
+        mode2()
+    elif(user_choice == "3"):
+        mode3()
+    else:
+      print("Exit")
+      exit()
+      
+def mode1():
+# Accept a user input word list file path and iterates through the word list assigning the word being read to a variable
+  word_list = input("Enter a Filename: ")
+# textfile=os.path.abspath(word_list)
+  filename=open(word_list, "r", encoding= "ISO-8859-1")
+  fileline=filename.readlines()
+  for line in fileline:
+    print(line)
+# Adding a delay between words sleep for 2 seconds
+    time.sleep(1)
+# The value of the variables will print to the screen
+
+def mode2():
+# Accepts a user input string
+    user_string=input("Enter a String: ")
+# Accepts a user input word list file path
+    word_list = input("Enter a Filename: ")
+# Search the word list for the user input string
+    filename=open(word_list, "r", encoding= "ISO-8859-1")
+    fileline=filename.read().splitlines()
+    for line in fileline:
+      if str(line) == user_string:
+        print("There was a match")
+        break
+      else:
+        print("No match found")
+    input()
+
+def mode3():
+    s = pxssh.pxssh()
+    host =input("Enter an IP address: ") 
+    username=input("Enter username: ") 
+    pswd = input("Enter file with password list: ")
+    filename=open(pswd, "r", encoding= "ISO-8859-1")
+    fileline=filename.readlines()
+    for line in fileline:
+        if str(line)==pswd:
+            try:
+                s.login(host, username, pswd)
+                s.sendline('uptime')
+                s.prompt()
+                print(s.before)        # print everything before the prompt.
+                s.sendline('ls -l')
+                s.prompt()
+                print(s.before)
+                s.sendline('df')
+                s.prompt()
+                print(s.before)
+                s.logout()
+
+            except pxssh.ExceptionPxssh as e:
+                print("pxssh failed on login.")
+                print(e)
+
+def 
+
+zip_file = ### Your password protected zip file ###
+password = ### Password to guess ###
+
+with ZipFile(zip_file) as zf:
+  zf.extractall(pwd=bytes(password,'utf-8'))
+#Main
+user_selection()
+#End
