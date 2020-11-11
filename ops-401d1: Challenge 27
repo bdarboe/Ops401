@@ -8,22 +8,10 @@ from logging.handlers import RotatingFileHandler
 #script Name: Ops401challenge27
 #Author: Bubacarr Darboe
 #Date: 11/10/2020
-#Description of purpose: logging errors
+#Description of purpose: logging errors 2
 #Declaration of variable
 
 #Main
-
-logger = logging.getLogger('my_logger')
-handler = RotatingFileHandler('my_log.log', maxBytes=VALUE, backupCount=VALUE) #set each VALUE
-logger.addHandler(handler)
-
-for i in range(VALUE): #set each VALUE
-    logmsg = "Hello world!"
-    logmsg += str(i)
-    logger.warning(logmsg)
-    print ("Logging Hello world! number", i)
-    os.system("ls -al")
-    time.sleep(.1)
 
 handler = logging.handlers.WatchedFileHandler(
     os.environ.get("LOGFILE", "/var/log/yourapp.log"))
@@ -38,5 +26,15 @@ try:
 except Exception:
     logging.exception("Exception in main()")
     exit(1)
-    
-  #End
+
+logger = logging.getLogger('my_logger')
+handler = RotatingFileHandler('my_log.log', maxBytes=200, backupCount=10)
+logger.addHandler(handler)
+
+for i in range(1000): #set each VALUE
+    logmsg = "error loggings!"
+    logmsg += str(i)
+    logger.warning(logmsg)
+    print ("Logging Error Messages! number", i)
+    os.system("ls -al")
+    time.sleep(.1)
