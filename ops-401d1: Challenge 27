@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+#Import Library
+import logging
+import logging.handlers
+import os
+from logging.handlers import RotatingFileHandler
+
+#script Name: Ops401challenge27
+#Author: Bubacarr Darboe
+#Date: 11/10/2020
+#Description of purpose: logging errors
+#Declaration of variable
+
+#Main
+
+logger = logging.getLogger('my_logger')
+handler = RotatingFileHandler('my_log.log', maxBytes=VALUE, backupCount=VALUE) #set each VALUE
+logger.addHandler(handler)
+
+for i in range(VALUE): #set each VALUE
+    logmsg = "Hello world!"
+    logmsg += str(i)
+    logger.warning(logmsg)
+    print ("Logging Hello world! number", i)
+    os.system("ls -al")
+    time.sleep(.1)
+
+handler = logging.handlers.WatchedFileHandler(
+    os.environ.get("LOGFILE", "/var/log/yourapp.log"))
+formatter = logging.Formatter(logging.BASIC_FORMAT)
+handler.setFormatter(formatter)
+root = logging.getLogger()
+root.setLevel(os.environ.get("LOGLEVEL", "INFO"))
+root.addHandler(handler)
+ 
+try:
+    exit(main())
+except Exception:
+    logging.exception("Exception in main()")
+    exit(1)
+    
+  #End
