@@ -12,6 +12,7 @@ The definition and objectives of malware analysis are: It breaks down the malwar
 4.	Record the baseline. 
 5.	Commence your investigation. 
 6.	Document the results. 
+
 Malware is a very crucial aspect of cyber security therefore governments and organizations work tirelessly help improve the sector to contain the numerous attackers carried out daily. 
 
                                                       Types of Malware Analysis
@@ -20,6 +21,7 @@ Malware is a very crucial aspect of cyber security therefore governments and org
 2. Dynamic malware analysis 
 3. Manual malware analysis 
 4. Automated malware analysis 
+
 These analysis goes through different stages in order to properly execute an analysis and understand the composition of a malware.
 
                                                     Key Stages of Malware Analysis
@@ -40,4 +42,5 @@ Disassembling the code involves both static analysis as well as its inner logic.
 4. Only analyze malware whose remote infrastructure is running. 
 5. Capture and store VM image snapshots.
 6. Do your research and select the best-fit malware analysis tools.
+
 With the hundreds of thousands of malware circulating every day, it is even more important today than ever to understanding and properly utilize the art of malware analysis in order to stay safe.
