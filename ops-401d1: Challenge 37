@@ -1,1 +1,62 @@
+#!/usr/bin/env python
+###Import Library###
+import os, time
+import subprocess
 
+
+###script Name: Ops401challenge37###
+###Author: Bubacarr Darboe###
+###Date: 11/24/2020###
+###Description of purpose: Banner grabbing2###
+###Declaration of variable###
+
+#Declaration of functions
+def interface():
+    print("""
+    Please make a selection
+    1) Banner Scanning
+    2) Exit
+    """)
+    user_input = input()
+    if(user_input == "1"):
+        user_choice()
+    else:
+        print("exiting...")
+        time.sleep(2)
+        exit(0)
+
+def user_choice():
+    ip_address = input("Enter your ip address or url:  ")
+    port = input("Enter your port number: ")
+    net_cat(ip_address, port)
+    tel_net(ip_address, port)
+    nmapping(ip_address)
+    
+###netcat banner grabbing###     
+def net_cat(ip_address, port):
+    process2 = subprocess.Popen(["nc", ip_address, port])
+    try:
+        process2.wait(timeout=3)
+    except:
+        process2.kill()
+    time.sleep(1)
+    
+###telnet banner grabbing###    
+def tel_net(ip_address, port):
+    process1 = subprocess.Popen(["telnet", ip_address, port])
+    try:
+        process1.wait(timeout=3)
+    except:
+        process1.kill()
+    time.sleep(1)
+    
+###nmap banner grabbing###
+def nmapping(ip_address):
+    process = subprocess.Popen(["nmap", "-sV", ip_address])
+    try:
+        process.wait(timeout=3)
+    except:
+        process.kill()
+    time.sleep(1)
+
+#End
