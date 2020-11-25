@@ -2,6 +2,7 @@
 ###Import Library###
 import os, time
 import subprocess
+import requests
 
 
 ###script Name: Ops401challenge37###
@@ -10,53 +11,37 @@ import subprocess
 ###Description of purpose: Banner grabbing2###
 ###Declaration of variable###
 
+# targetsite = input("Enter target site:") # Uncomment this to accept user input target site
+targetsite = "http://www.whatarecookies.com/cookietest.asp" # Comment this out if you're using the line above
+response = requests.get(targetsite)
+cookie = response.cookies
+
 #Declaration of functions
-def interface():
-    print("""
-    Please make a selection
-    1) Banner Scanning
-    2) Exit
-    """)
-    user_input = input()
-    if(user_input == "1"):
-        user_choice()
-    else:
-        print("exiting...")
-        time.sleep(2)
-        exit(0)
+def bringforthcookiemonster(): # Because why not!
+    print('''
 
-def user_choice():
-    ip_address = input("Enter your ip address or url:  ")
-    port = input("Enter your port number: ")
-    net_cat(ip_address, port)
-    tel_net(ip_address, port)
-    nmapping(ip_address)
-    
-###netcat banner grabbing###     
-def net_cat(ip_address, port):
-    process2 = subprocess.Popen(["nc", ip_address, port])
-    try:
-        process2.wait(timeout=3)
-    except:
-        process2.kill()
-    time.sleep(1)
-    
-###telnet banner grabbing###    
-def tel_net(ip_address, port):
-    process1 = subprocess.Popen(["telnet", ip_address, port])
-    try:
-        process1.wait(timeout=3)
-    except:
-        process1.kill()
-    time.sleep(1)
-    
-###nmap banner grabbing###
-def nmapping(ip_address):
-    process = subprocess.Popen(["nmap", "-sV", ip_address])
-    try:
-        process.wait(timeout=3)
-    except:
-        process.kill()
-    time.sleep(1)
+              .---. .---.
+             :     : o   :    me want cookie!
+         _..-:   o :     :-.._    /
+     .-''  '  `---' `---' "   ``-.
+   .'   "   '  "  .    "  . '  "  `.
+  :   '.---.,,.,...,.,.,.,..---.  ' ;
+  `. " `.                     .' " .'
+   `.  '`.                   .' ' .'
+    `.    `-._           _.-' "  .'  .----.
+      `. "    '"--...--"'  . ' .'  .'  o   `.
 
+        ''')
+
+bringforthcookiemonster()
+print("Target site is " + targetsite)
+print(cookie)
+
+# Add here some code to make this script perform the following:
+# - Send the cookie back to the site and receive a HTTP response
+# - Generate a .html file to capture the contents of the HTTP response
+# - Open it with Firefox
+#
+# Stretch Goal
+# - Give Cookie Monster hands
 #End
