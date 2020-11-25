@@ -8,7 +8,7 @@ import requests
 ###script Name: Ops401challenge37###
 ###Author: Bubacarr Darboe###
 ###Date: 11/24/2020###
-###Description of purpose: Banner grabbing2###
+###Description of purpose: Cookies###
 ###Declaration of variable###
 
 # targetsite = input("Enter target site:") # Uncomment this to accept user input target site
@@ -37,11 +37,13 @@ bringforthcookiemonster()
 print("Target site is " + targetsite)
 print(cookie)
 
-# Add here some code to make this script perform the following:
-# - Send the cookie back to the site and receive a HTTP response
-# - Generate a .html file to capture the contents of the HTTP response
-# - Open it with Firefox
-#
-# Stretch Goal
-# - Give Cookie Monster hands
+htmlrequest = requests.get(targetsite, cookies=cookie)
+website = cookiemonsterhtml.text
+
+with open ('cookiemonster.html', 'w') as file:file.write(website)
+# Print to screen that website is opening
+print("site opening...")
+# Open it with Firefox
+os.system("firefox /home/bdabo/cookiemonster.html")
+exit()
 #End
