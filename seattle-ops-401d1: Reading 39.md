@@ -1,10 +1,10 @@
-							                                          SQL Injection, Identification and Prevention
+					SQL Injection, Identification and Prevention
 
 Standardized query language (SQL) is one of the major tools used in the method of inserting, filtering and retrieving information from a database. Loads of SQL queries will be coursing through your web applications on almost every page load regardless of size. With just a web browser and some basic SQL knowledge and an internet connection, an attacker can exploit flaws in your web application – extracting user data, discovering or resetting credentials and using it as a launch point for deeper assaults on your network.
 
 We’re going to get to work our way up to SQL injection attacks and the reason they are scarier than a clown who lives in a drainpipe. But in order to understand injection/vulnerabilities, we need to take a step back and review that basic SQL knowledge first.
  
-								                                                        What is SQL?
+ 							What is SQL?
 
 SQL should not be thought of as a language or tool that is use for getting data out of a database. Limiting its power and complexity directly leads to many of the security issues that occur when you put a web application in front of a SQL database. SQL is a full programming language unto itself and can be used just like any other programming language.
 
