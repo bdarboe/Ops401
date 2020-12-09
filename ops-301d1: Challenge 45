@@ -1,17 +1,25 @@
 #!/usr/bin/python3
-
+#Import Library
 import socket
 
+#script Name: Ops401challenge44
+#Author: Bubacarr Darboe
+#Date: 12/08/2020
+#Description of purpose: banner grabbing
+#Declaration of variable
+
+#Main
+
 def bannergrab(host, port):
-    timeout = #TODO: Set a timeout value.
+    timeout = 3000
     sockmod = socket.socket()
-    sockmod.#TODO: Insert the correct `socket` function name here that accepts the host IP, then port number as parameters.
+    sockmod.bind
     sockmod.settimeout(timeout)
     print(sockmod.recv(1024))
 
 def main():
-    host = #TODO: Prompt the user to type an IP.
-    port = #TODO: Prompt the user to type a port number that we'll convert to a "string" data type.
+    hostip = input("Enter IP address: ")
+portno = int(input("Enter your port number: "))
     bannergrab(host, port)
 
 main()
